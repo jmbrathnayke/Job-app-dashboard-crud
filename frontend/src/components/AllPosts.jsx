@@ -1,7 +1,9 @@
 import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import SearchIcon from '@mui/icons-material/Edit';
+//import SearchIcon from '@mui/icons-material/Edit';
+import SearchIcon from "@mui/icons-material/Search";
+
 
 import {
   Box,
@@ -60,7 +62,7 @@ const handleEdit = (id) => {
               ),
             }}
             placeholder="Search..."
-            sx={{ width: "75%", padding: "2% auto" }}
+            sx={{ width: "100%", padding: "25% auto" }}
             fullWidth
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -70,14 +72,14 @@ const handleEdit = (id) => {
         post.map((p) => {
           return (
             <Grid key={p.id} item xs={12} md={6} lg={4}>
-              <Card sx={{ padding: "3%", overflow: "hidden", width: "84%", backgroundColor:"#ADD8E6" }}>
+              <Card sx={{ padding: "2%",marginTop:"15%", overflow: "hidden", width: "60%", backgroundColor:"#ADD8E6" }}>
                 <Typography        
                   variant="h5"
                   sx={{ fontSize: "2rem", fontWeight: "600", fontFamily:"sans-serif" }}
                 >
              {p.postProfile}
                 </Typography>
-                <Typography  sx={{ color: "#585858", marginTop:"2%", fontFamily:"cursive" }} variant="body" >
+                <Typography  sx={{ color: "#585858", marginTop:"3%", fontFamily:"cursive" }} variant="body" >
                   Description: {p.postDesc}
                 </Typography>
                 <br />
